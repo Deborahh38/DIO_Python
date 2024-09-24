@@ -4,7 +4,7 @@ menu = """
 [s] Sacar
 [e] Extrato
 [q] Sair
-
+[a] Novo saldo
 => """
 
 saldo = 0
@@ -64,3 +64,19 @@ while True:
 
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
+
+# Função para calcular o novo saldo
+def calcular_novo_saldo(saldo_atual, deposito):
+    return saldo_atual + deposito
+
+# Solicitar o saldo atual da conta
+saldo_atual = float(input("Digite o saldo atual da conta: R$ "))
+
+# Solicitar o valor do depósito
+deposito = float(input("Digite o valor do depósito: R$ "))
+
+# Calcular o novo saldo
+novo_saldo = calcular_novo_saldo(saldo_atual, deposito)
+
+# Exibir o novo saldo
+print(f"O novo saldo após o depósito é: R$ {novo_saldo:.2f}")
