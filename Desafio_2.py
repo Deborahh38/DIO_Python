@@ -8,9 +8,9 @@ menu = """
 => """
 
 saldo = 0
-limite = 500
+limite = 100
 extrato = ""
-numero_saques = 0
+numero_saques = 2
 LIMITE_SAQUES = 3
 
 while True:
@@ -28,7 +28,7 @@ while True:
             print("Operação falhou! O valor informado é inválido.")
 
     elif opcao == "s":
-        valor = float(input("Informe o valor do saque: "))
+        valor = float(input("Informe o valor do seu saque: "))
 
         excedeu_saldo = valor > saldo
 
